@@ -28,5 +28,5 @@ if __name__ == "__main__":
     account1.display_balance()
     account1.deposit(500)
     account1.withdraw(300)
-    # This should trigger "insufficient funds"
+    # This should trigger "Insufficient funds or invalid amount"
     account1.withdraw(1500)
