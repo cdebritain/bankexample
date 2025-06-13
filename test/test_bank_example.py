@@ -1,11 +1,11 @@
 import pytest
 
-# Import the implementation under test instead of redefining it here
 from pathlib import Path
 import sys
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
-from bank_example import BankAccount
+# Ensure the project root is on the path so ``src`` can be imported
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from src.bank_example import BankAccount
 
 
 # ------------------------
