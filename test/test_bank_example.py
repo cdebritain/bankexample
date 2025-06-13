@@ -1,27 +1,11 @@
 import pytest
 
-# Original class
-class BankAccount:
-    def __init__(self, owner, balance=0):
-        self.owner = owner
-        self.balance = balance
+# Import the implementation under test instead of redefining it here
+from pathlib import Path
+import sys
 
-    def deposit(self, amount):
-        if amount > 0:
-            self.balance += amount
-            print(f"₹{amount} deposited. New balance: ₹{self.balance}")
-        else:
-            print("Invalid deposit amount")
-
-    def withdraw(self, amount):
-        if 0 < amount <= self.balance:
-            self.balance -= amount
-            print(f"₹{amount} withdrawn. New balance: ₹{self.balance}")
-        else:
-            print("Insufficient funds or invalid amount")
-
-    def display_balance(self):
-        print(f"{self.owner}'s account balance: ₹{self.balance}")
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
+from bank_example import BankAccount
 
 
 # ------------------------

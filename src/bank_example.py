@@ -21,11 +21,12 @@ class BankAccount:
         print(f"{self.owner}'s account balance: ₹{self.balance}")
 
 
-# Creating an object of BankAccount
-account1 = BankAccount("Isha", 1000)
+if __name__ == "__main__":
+    # Example usage
+    account1 = BankAccount("Isha", 1000)
 
-# Performing operations
-account1.display_balance()
-account1.deposit(500)
-account1.withdraw(300)
-account1.withdraw(1500)  # This should trigger "insufficient funds"
+    account1.display_balance()
+    account1.deposit(500)
+    account1.withdraw(300)
+    # This should trigger "insufficient funds"
+    account1.withdraw(1500)
